@@ -13,10 +13,10 @@ export class FleetPageService {
 
   getFleetById(id: String): Observable<FleetSaveResponse>{
 
-    return this.http.get<FleetSaveResponse>(`http://localhost:8080/api/v1/fleets/${id}`);
+    return this.http.get<FleetSaveResponse>(`https://fathomless-castle-42321.herokuapp.com/api/v1/fleets/${id}`);
   }
 
   getVehicle(url: string): Observable<VehicleListResponse>{
-    return this.http.get<VehicleListResponse>(`http://localhost:8080${url}`);
+    return this.http.get<VehicleListResponse>(`https://fathomless-castle-42321.herokuapp.com${url}`);
   }
 }

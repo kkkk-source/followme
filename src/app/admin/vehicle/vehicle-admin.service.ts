@@ -13,26 +13,26 @@ export class VehicleAdminService {
 
   create(vehicleToCreate: VehicleSaveRequest): Observable<HttpResponse<object>>{
     console.log(vehicleToCreate);
-    return this.http.post('http://localhost:8080/api/v1/vehicles', vehicleToCreate, {observe: 'response'});
+    return this.http.post('https://fathomless-castle-42321.herokuapp.com/api/v1/vehicles', vehicleToCreate, {observe: 'response'});
   }
 
   findVehicleByUrl(vehicleUrl: string): Observable<VehicleSaveResponse> {
     console.log(vehicleUrl);
-    return this.http.get<VehicleSaveResponse>(`http://localhost:8080${vehicleUrl}`);
+    return this.http.get<VehicleSaveResponse>(`https://fathomless-castle-42321.herokuapp.com${vehicleUrl}`);
   }
 
   linkVehicleToFleet(fleetId: String, vehicleCreatedId: string) {
-    let url = `http://localhost:8080/api/v1/fleets/${fleetId}/vehicles`;
+    let url = `https://fathomless-castle-42321.herokuapp.com/api/v1/fleets/${fleetId}/vehicles`;
     console.log(url);
     let vehicleToAddId: number = +vehicleCreatedId;
     return this.http.patch(url, {vehicleId: vehicleToAddId});
   }
 
   deleteById(id: number): Observable<any> {
-    return this.http.delete(`http://localhost:8080/api/v1/vehicles/${id}`);
+    return this.http.delete(`https://fathomless-castle-42321.herokuapp.com/api/v1/vehicles/${id}`);
   }
 
   uploadFile(formData: FormData, url: string): Observable<string[]>{
-    return this.http.post<string[]>('http://localhost:8080'+url, formData);
+    return this.http.post<string[]>('https://fathomless-castle-42321.herokuapp.com'+url, formData);
   }
 }

@@ -17,7 +17,7 @@ export class HomeServiceService {
 
   getFleets(): Observable<ResponsePagination>{
     
-    return this.http.get<ResponsePagination>('http://localhost:8080/api/v1/fleets');
+    return this.http.get<ResponsePagination>('https://fathomless-castle-42321.herokuapp.com/api/v1/fleets');
 
   }
 }

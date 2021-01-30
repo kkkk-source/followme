@@ -10,6 +10,6 @@ export class UploadService {
 
   uploadFile(formData: FormData, url: string){
 
-    return this.http.post('http://localhost:8080'+url, formData);
+    return this.http.post('https://fathomless-castle-42321.herokuapp.com'+url, formData);
   }
 }
