@@ -104,7 +104,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-user-run"></i></span>
                     </div>
-                    <input formControlName="licensePlate" class="form-control" placeholder="Licensia" type="text" (focus)="focus=true" (blur)="focus=false">
+                    <input formControlName="licensePlate" class="form-control" placeholder="Licencia" type="text" (focus)="focus=true" (blur)="focus=false">
                   </div>
                   <div *ngIf="createVehicleForm.get('licensePlate').hasError('required') && createVehicleForm.get('licensePlate').touched" class="alert alert-danger">Debe ingresar una placa</div>
                   <div *ngIf="createVehicleForm.get('licensePlate').hasError('minlength') && createVehicleForm.get('licensePlate').touched" class="alert alert-danger">Longitud mínima de 3 caracteres</div>
